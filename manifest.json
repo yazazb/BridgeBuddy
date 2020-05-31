@@ -1,0 +1,36 @@
+{
+    "name": "BridgeBuddy",
+    "version": "1.0",
+    "description": "Save your Bridge ID and Password once and get autofilled every time at the point of submission of challenges.",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    
+    "permissions": ["tabs","activeTab","storage"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/BBLogo16.png",
+            "32": "images/BBLogo32.png",
+            "48": "images/BBLogo48.png",
+            "128": "images/BBLogo128.png"
+          }  
+      },  
+    
+    "icons": {
+      "16": "images/BBLogo16.png",
+      "32": "images/BBLogo32.png",
+      "48": "images/BBLogo48.png",
+      "128": "images/BBLogo128.png"
+      },  
+    "content_scripts": [
+        {
+          "matches": ["*://docs.google.com/forms/*"],
+          "js": ["background.js"]
+        }
+      ],  
+    "manifest_version": 2    
+      
+}
+

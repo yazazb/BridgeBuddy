@@ -1,1 +1,1 @@
-# Bridge-Buddy
+# BridgeBuddy
